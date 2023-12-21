@@ -43,12 +43,14 @@
           <tbody v-if="$vuetify.breakpoint.mdAndUp">
             <tr>
               <th rowspan="3" class="f00_nitro_space"></th>
-              <th rowspan="3" class="f00_nitro" @click="handleClick()">
+              <th rowspan="3" class="f00_nitro">
                 <span>ニトロ</span>
               </th>
               <th colspan="10" class="f00_nitro_header"></th>
               <th rowspan="3" class="f00_inbreed_space"></th>
-              <th rowspan="3" class="f00_inbreed"><span>クロス</span></th>
+              <th rowspan="3" class="f00_inbreed" @click="handleClick()">
+                <span>クロス</span>
+              </th>
               <th colspan="10" class="f00_inbreed_header"></th>
               <th rowspan="2" class="table_footer_TH_theory">理論</th>
               <th
@@ -110,12 +112,14 @@
           <tbody v-if="$vuetify.breakpoint.smAndDown">
             <tr>
               <th rowspan="3" class="f00_nitro_space"></th>
-              <th rowspan="3" class="f00_nitro" @click="handleClick()">
+              <th rowspan="3" class="f00_nitro">
                 <span>ニトロ</span>
               </th>
               <th colspan="7" class="f00_nitro_header"></th>
               <th rowspan="3" class="f00_inbreed_space"></th>
-              <th rowspan="3" class="f00_inbreed"><span>クロス</span></th>
+              <th rowspan="3" class="f00_inbreed" @click="handleClick()">
+                <span>クロス</span>
+              </th>
               <th colspan="7" class="f00_inbreed_header"></th>
               <th
                 v-if="dispCategory%2 === 0"
