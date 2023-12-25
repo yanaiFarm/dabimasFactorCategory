@@ -1,11 +1,11 @@
 // cache name, cache files
 var CACHE_NAME = 'dabimas-factor-v1';
 var urlsToCache = [
-    '/yanaifarm.github.io/dabimasFactor/index.html',
-    '/yanaifarm.github.io/dabimasFactor/json/dabimasFactor.json',
-    '/yanaifarm.github.io/dabimasFactor/css/style.css',
-    '/yanaifarm.github.io/dabimasFactor/css/vuetify.min.css',
-    '/yanaifarm.github.io/dabimasFactor/css/vuetify_compact.min.css',
+    '/yanaifarm.github.io/dabimasFactorCategory/index.html',
+    '/yanaifarm.github.io/dabimasFactorCategory/json/dabimasFactor.json',
+    '/yanaifarm.github.io/dabimasFactorCategory/css/style.css',
+    '/yanaifarm.github.io/dabimasFactorCategory/css/vuetify.min.css',
+    '/yanaifarm.github.io/dabimasFactorCategory/css/vuetify_compact.min.css',
 ];
 
 // install cache
