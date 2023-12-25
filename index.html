@@ -128,7 +128,7 @@
               >
                 理論
               </th>
-              <th v-else rowspan="2" class="table_footer_TH_theory">子系</th>
+              <th v-else rowspan="2" class="table_footer_TH_theory">子系統</th>
               <th
                 rowspan="3"
                 width="9%"
@@ -1215,7 +1215,7 @@
                         ><v-icon>mdi-heart</v-icon></v-btn
                       >
                     </td>
-                    <td :class="styleFactorClasses[0 + 16][0]">
+                    <!-- <td :class="styleFactorClasses[0 + 16][0]">
                       {{factorName[0 + 16][0]}}
                     </td>
                     <td :class="styleFactorClasses[0 + 16][1]">
@@ -1223,6 +1223,10 @@
                     </td>
                     <td :class="styleFactorClasses[0 + 16][2]">
                       {{factorName[0 + 16][2]}}
+                    </td> -->
+                    <td colspan="3" :class="styleFactorClasses[0 + 16][0]">
+                      <v-btn v-if="$vuetify.breakpoint.mdAndUp" variant="outlined" @click="handleClick()">{{dispButtonName}}</v-btn>
+                      <v-btn v-if="$vuetify.breakpoint.smAndDown" variant="outlined" x-small @click="handleClick()">{{dispButtonName}}</v-btn>
                     </td>
                   </tr>
 
@@ -2473,12 +2477,19 @@
 
           // 子系統を表示させるフラグ
           dispCategory: 0,
+          // ボタン表示名
+          dispButtonName: '子系統',
 
           // インブリードされているところを格納する変数
           inbreedList: Array.from(new Array(32).fill(null)),
           reload: 0,
           size: {},
         };
+      },
+      watch: {
+        dispCategory: function(value) {
+          this.dispButtonName = value%2 === 0 ? '子系統' : '因　子';
+        },
       },
 
       //async created () {
